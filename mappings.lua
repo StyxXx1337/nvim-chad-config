@@ -74,6 +74,7 @@ M.telescope = {
 
 M.lsp = {
   n = {
+    ["<leader>l"] = { "Lsp" },
     ["<leader>lD"] = {
       function()
         vim.lsp.buf.type_definition()
@@ -239,6 +240,8 @@ M.disabled = {
     ["<leader>wm"] = "",
     -- former folder remove 
     ["<leader>wr"] = "",
+    -- former preview_hunk
+    ["<leader>ph"] = "",
     -- former folder list 
     ["<leader>wl"] = "",
   -- Terminal
@@ -256,6 +259,8 @@ M.disabled = {
     ["<leader>cm"] = "",
       -- former git status command
     ["<leader>gt"] = "",
+      -- former git hidden terminal 
+    ["<leader>pt"] = "",
   },
 
   -- WhichKey
