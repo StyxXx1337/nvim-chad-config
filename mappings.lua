@@ -240,10 +240,11 @@ M.disabled = {
     ["<leader>wm"] = "",
     -- former folder remove 
     ["<leader>wr"] = "",
-    -- former preview_hunk
-    ["<leader>ph"] = "",
+    -- former folder add 
+    ["<leader>wa"] = "",
     -- former folder list 
     ["<leader>wl"] = "",
+
   -- Terminal
      -- former new horizontal command
     ["<leader>h"] = "",
@@ -261,7 +262,6 @@ M.disabled = {
     ["<leader>gt"] = "",
       -- former git hidden terminal 
     ["<leader>pt"] = "",
-  },
 
   -- WhichKey
     ["<leader>wk"] = "",
@@ -271,7 +271,7 @@ M.disabled = {
     ["<leader>rh"] = "",
     ["<leader>ph"] = "",
     ["<leader>td"] = "",
-
+  },
 }
 
 -- more keybinds!
