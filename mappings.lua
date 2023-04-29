@@ -33,7 +33,7 @@ M.esc = {
 M.general = {
   n = {
     -- saveing
-    ["<leader>w"] = { "<cmd> w <CR>", "save file" },
+    ["<leader>w"] = { "<cmd> w <CR>", "-> save file" },
     ["<C-s>"] = { "<cmd> w! <CR>", "save file" },
   },
 }
@@ -45,7 +45,7 @@ M.tabufline = {
     function()
       require("nvchad_ui.tabufline").close_buffer()
     end,
-    "close buffer",
+    "-> close buffer",
     },
   },
 }
@@ -53,7 +53,7 @@ M.tabufline = {
 M.nvimtree = {
   n = {
     -- toggle
-    ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
+    ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "-> nvimtree" },
 
     -- focus
     ["<C-n>"] = { "<cmd> NvimTreeFocus <CR>", "focus nvimtree" },
@@ -225,13 +225,16 @@ M.disabled = {
     ["<leader>n"] = "",
      -- former relative number toggle command
     ["<leader>rn"] = "",
+    ["<leader>x"] = "",
+    ["<leader>b"] = "",
   -- lsp
      -- former nvchad renamer
     ["<leader>ra"] = "",
      -- former code action 
     ["<leader>ca"] = "",
      -- former floating diag 
-    ["<leader>f"] = "",
+    -- ["<leader>f"] = "",
+    ["<leader>D"] = "",
      -- former diag loclist 
     ["<leader>q"] = "",
     -- former lsp format

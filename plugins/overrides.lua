@@ -38,6 +38,7 @@ M.mason = {
 M.nvimtree = {
   git = {
     enable = true,
+    ignore = false,
   },
 
   view = {
@@ -45,7 +46,7 @@ M.nvimtree = {
   },
 
   renderer = {
-    root_folder_label = true,
+    root_folder_label = ":~:s?$?/..?",
     highlight_git = true,
     icons = {
       show = {
