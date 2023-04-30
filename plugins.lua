@@ -55,9 +55,12 @@ local plugins = {
   },
 
   {
-    "tanvirtin/vgit.nvim",
-    config = "custom.configs.vgit",
-  },
+    "tpope/vim-fugitive",
+    lazy = false,
+    config = function()
+      require "custom.configs.vim-fugitive",
+    end,    
+  }
 
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,

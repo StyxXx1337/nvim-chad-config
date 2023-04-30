@@ -133,28 +133,6 @@ M.git = {
       end,
       "Toggle deleted",
     },
-
-    ["<C-k>"] = {
-      function() require('vgit').hunk_up() end, "hunk up",
-    },
-    ["<C-j>"] = {
-      function() require('vgit').hunk_down() end, "hunk down"
-    },
-    ["<leader>gp"] = {
-      function()
-        require('vgit').buffer_hunk_preview() end, "hunk preview" },
-    ["<leader>gf"] = {
-      function()
-        require('vgit').buffer_diff_preview() end, "diff preview" },
-    ["<leader>gh"] = {
-      function()
-        require('vgit').buffer_history_preview() end, "buffer history" },
-    ["<leader>gd"] = {
-      function()
-        require('vgit').project_diff_preview() end,"project diff" },
-    ["<leader>gl"] = {
-      function()
-        require('vgit').project_hunks_qf() end,"hunks list" },
   },
 }
 
