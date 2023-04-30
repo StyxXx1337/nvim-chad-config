@@ -58,7 +58,7 @@ local plugins = {
     "tpope/vim-fugitive",
     lazy = false,
     config = function()
-      require "custom.configs.vim-fugitive",
+      require "custom.configs.vim-fugitive"
     end,    
   }
 
