@@ -127,7 +127,7 @@ M.git = {
     -- ["<leader>gs"] = { "<cmd> Telescope git_status <CR>", "git status" },
     -- Actions
 
-    ["<leader>gt"] = {
+    ["<leader>gd"] = {
       function()
         require("gitsigns").toggle_deleted()
       end,
@@ -140,45 +140,21 @@ M.git = {
     ["<C-j>"] = {
       function() require('vgit').hunk_down() end, "hunk down"
     },
-    ["<leader>gs"] = {
-      function()
-        require('vgit').buffer_hunk_stage() end, "hunk stage" },
-    ["<leader>gr"] = {
-      function()
-        require('vgit').buffer_hunk_reset() end, "hunk reset" },
     ["<leader>gp"] = {
       function()
         require('vgit').buffer_hunk_preview() end, "hunk preview" },
-    ["<leader>gb"] = {
-      function()
-        require('vgit').buffer_blame_preview() end, "git blame" },
     ["<leader>gf"] = {
       function()
         require('vgit').buffer_diff_preview() end, "diff preview" },
     ["<leader>gh"] = {
       function()
         require('vgit').buffer_history_preview() end, "buffer history" },
-    ["<leader>gu"] = {
-      function()
-        require('vgit').buffer_reset() end, "buffer reset" },
-    ["<leader>gg"] = {
-      function()
-        require('vgit').buffer_gutter_blame_preview() end, "gutter blame" },
-    ["<leader>glu"] = {
-      function()
-        require('vgit').buffer_hunks_preview() end, "buffer hunks" },
-    ["<leader>gls"] = {
-      function()
-        require('vgit').project_hunks_staged_preview() end,"hunks staged" },
     ["<leader>gd"] = {
       function()
         require('vgit').project_diff_preview() end,"project diff" },
-    ["<leader>gq"] = {
+    ["<leader>gl"] = {
       function()
-        require('vgit').project_hunks_qf() end,"hunks qf" },
-    ["<leader>gx"] = {
-      function()
-        require('vgit').toggle_diff_preference() end,"diff preview" },
+        require('vgit').project_hunks_qf() end,"hunks list" },
   },
 }
 
