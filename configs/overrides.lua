@@ -34,6 +34,32 @@ M.mason = {
   },
 }
 
+M.telescope = {
+  defaults = {
+    mappings = {
+      i = {
+        ["<C-n>"] = require("telescope.actions").cycle_history_next,
+        ["<C-p>"] = require("telescope.actions").cycle_history_prev,
+
+        ["<C-j>"] = require("telescope.actions").move_selection_next,
+        ["<C-k>"] = require("telescope.actions").move_selection_previous,
+
+        ["<C-b>"] = require("telescope.actions").results_scrolling_up,
+        ["<C-f>"] = require("telescope.actions").results_scrolling_down,
+
+        ["<C-c>"] = require("telescope.actions").close,
+
+        ["<Down>"] = require("telescope.actions").move_selection_next,
+        ["<Up>"] = require("telescope.actions").move_selection_previous,
+
+        ["<CR>"] = require("telescope.actions").select_default,
+        ["<C-s>"] = require("telescope.actions").select_horizontal,
+        ["<C-v>"] = require("telescope.actions").select_vertical,
+        ["<C-t>"] = require("telescope.actions").select_tab,
+      },
+    },
+  },
+}
 -- git support in nvimtree
 M.nvimtree = {
   git = {
