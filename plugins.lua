@@ -24,23 +24,13 @@ local plugins = {
 
   -- overrde plugin configs
   {
-    "nvim-treesitter/nvim-treesitter",
-    opts = overrides.treesitter,
-  },
-
-  {
     "williamboman/mason.nvim",
-    opts = overrides.mason, 
-  },
-
-  {
-    "nvim-telescope/telescope.nvim",
-    opts = overrides.telescope, 
-  },
-
-  {
-    "nvim-tree/nvim-tree.lua",
-    opts = overrides.nvimtree,
+    opts = {
+      ensure_installed = {
+        "rust-analyzer",
+        "clangd",
+      },
+    },
   },
 
 -- Install a plugin
@@ -53,20 +43,53 @@ local plugins = {
   },
 
 -- code formatting, linting etc
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    after = "nvim-lspconfig",
-    config = "custom.configs.null-ls",
-  },
+  -- {
+  --   "jose-elias-alvarez/null-ls.nvim",
+  --   after = "nvim-lspconfig",
+  --   config = "custom.configs.null-ls",
+  -- },
 
   {
     "tpope/vim-fugitive",
     lazy = false,
     config = function()
       require "custom.configs.vim-fugitive"
-    end,    
-  }
+    end,
+  },
 
+  {
+    "simrat39/rust-tools.nvim",
+    ft = "rust",
+    dependencies = "neovim/nvim-lspconfig",
+    opts = function ()
+      return require "custom.configs.rust-tools"
+    end,
+    config = function(_, opts)
+      require("rust-tools").setup(opts)
+    end,
+  },
+
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function ()
+      vim.g.rustfmt_autosave = 1
+    end,
+  },
+
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      require "custom.configs.dap"
+    end,
+  },
+
+  {
+    "nvim-lua/plenary.nvim",
+    lazy = false,
+    config = function()
+    end,
+  },
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
 }
